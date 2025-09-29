@@ -1,0 +1,55 @@
+/* Reset e stili base */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white !important;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Contenuto app */
+.app-content {
+  padding-top: 60px; /* spazio per navbar fissa */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  font-size: 1rem;
+  outline: none;
+}
+
+/* Modalità Dark - applicata globalmente quando <html> ha classe dark-mode */
+html.dark-mode, body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Mantiene link leggibili in dark mode */
+html.dark-mode a,
+body.dark-mode a {
+  color: #66b2ff;
+}
+
+/* Sfondo e testo per il contenuto */
+html.dark-mode #root {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Ulteriori regole di stile opzionali per dark mode */
+html.dark-mode .app-content {
+  color: #eee;
+}
+
+/* Link focus e hover migliorati in dark */
+a:focus, a:hover {
+  outline: none;
+  text-decoration: underline;
+}
+
+html.dark-mode a:focus,
+html.dark-mode a:hover {
+  color: #99caff;
+}
+
+/* Altri stili della tua app qui */

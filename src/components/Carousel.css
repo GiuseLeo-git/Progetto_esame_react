@@ -1,0 +1,81 @@
+.carousel {
+  position: relative;
+  width: 100%; /* usa 100% invece di 100vw */
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  box-sizing: border-box; /* aggiunto per includere padding e border nel calcolo della larghezza */
+  padding: 0 1rem; /* opzionale per un piccolo padding ai lati */
+}
+
+
+.carousel-slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.carousel-button {
+  position: absolute;
+  bottom: 20px;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover,
+.carousel-button:focus {
+  background-color: #0056b3;
+  outline: none;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  font-size: 2.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  border-radius: 3px;
+  user-select: none;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  background: rgba(0, 0, 0, 0.6);
+  outline: none;
+}
+
+.carousel-control.left {
+  left: 15px;
+}
+
+.carousel-control.right {
+  right: 15px;
+}
