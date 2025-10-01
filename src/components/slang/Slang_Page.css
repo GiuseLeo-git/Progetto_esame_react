@@ -1,0 +1,52 @@
+/* Uniforma la pagina slang a tutto schermo e stile Home */
+.slang-main {
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding-top: 60px; /* spazio per navbar */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: var(--slang-bg, #f9f9f9);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.slang-header {
+  margin-bottom: 2rem;
+}
+
+.slang-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.slang-section, .slang-article {
+  flex: 1 1 350px;
+  min-width: 320px;
+  max-width: 500px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 1.5rem;
+  margin: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .slang-card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Dark mode support */
+html.dark-mode .slang-main {
+  background: #181818;
+}
+html.dark-mode .slang-section, html.dark-mode .slang-article {
+  background: #232323;
+  color: #eee;
+}

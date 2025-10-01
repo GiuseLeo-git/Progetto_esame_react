@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
+import { useNavigate } from "react-router-dom";
 
 interface NavbarProps {
   darkMode: boolean;
@@ -12,6 +13,7 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, fontSize, setFon
   const [modalOpen, setModalOpen] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
   const lastFocusedElement = useRef<HTMLElement | null>(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     function trapFocus(event: KeyboardEvent) {
@@ -87,19 +89,16 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, setDarkMode, fontSize, setFon
       </div>
       <ul className="navbar-links" role="menubar" aria-label="Menu principale">
         <li role="none">
-          <a href="#" role="menuitem" tabIndex={0}>
-            Pubblica Amministrazione
-          </a>
+          <button onClick={() => navigate('/')}>Home</button>
         </li>
         <li role="none">
-          <a href="#" role="menuitem" tabIndex={0}>
-            Slang
-          </a>
+          <button onClick={() => navigate('/PA')}>Pubblica Amministrazione</button>
         </li>
         <li role="none">
-          <a href="#" role="menuitem" tabIndex={0}>
-            Scam
-          </a>
+          <button onClick={() => navigate('/slang')}>Slang</button>
+        </li>
+        <li role="none">
+          <button onClick={() => navigate('/scam')}>Scam</button>
         </li>
       </ul>
       <div className="navbar-accessibility">

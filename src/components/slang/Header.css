@@ -1,0 +1,14 @@
+.header {
+  padding: 10px 0;
+  margin-top: 70px;
+  width: 100%;
+  background-color: antiquewhite;
+  color: #333;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* opzionale: spazio laterale interno */
+  text-align: center;
+}
