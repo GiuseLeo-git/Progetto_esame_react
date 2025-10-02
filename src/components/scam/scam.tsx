@@ -1,17 +1,20 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import Card from './Card';
 
 const Scam: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-	<div>
+  <div>
       <Header/>
       <div className="container my-5">
         <div className="card-container">
           <Card
             title="Phishing"
             description="Impara a riconoscere e difenderti dagli attacchi di phishing"
-            onClick={() => {}}
+            onClick={() => navigate("/phishing")}
           />
           <Card
             title="Virus"
@@ -25,7 +28,7 @@ const Scam: React.FC = () => {
           />
         </div>
       </div>
-	</div>
+  </div>
   );
 };
 
