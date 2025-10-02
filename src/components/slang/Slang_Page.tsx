@@ -3,7 +3,6 @@ import Navbar from "../Navbar";
 import Header from "./Header";
 import Section from "./Section";
 import Article from "./Article";
-import Footer from "../Footer";
 import "./Slang_Page.css";
 
 const Slang_Page: React.FC = () => {
@@ -20,6 +19,36 @@ const Slang_Page: React.FC = () => {
     }
   }, [darkMode, fontSize]);
 
+  const Latests = [
+    {
+      id: 1,
+      title: "24/7"
+
+    },
+
+    {
+      id: 2,
+      title: "Friendzone"
+
+    },
+
+    {
+      id: 3,
+      title: "ghost"
+
+    },
+
+    {
+      id: 4,
+      title: "Fomo"
+    },
+
+    {
+      id: 5,
+      title: "salty"
+    }
+  ]
+
   return (
     <>
       <Navbar
@@ -28,18 +57,41 @@ const Slang_Page: React.FC = () => {
         fontSize={fontSize}
         setFontSize={setFontSize}
       />
+
+
       <main className="slang-main" tabIndex={-1}>
         <div className="slang-header">
           <Header />
         </div>
-        <div className="slang-card-container">
-          <div className="slang-section">
-            <Section />
-          </div>
-          <div className="slang-article">
+
+        <h2 className="Article-Title">Termini principali</h2>
+        <div className="slang-container">
+          <div className="article">
             <Article />
           </div>
+
+          <div className="section">
+            <Section />
+          </div>
+
+
         </div>
+
+
+       <div className="Article-Last-Updates">
+            <h3 className="LU-Title">Ultimi Slang Aggiunti</h3>
+            <div className="Line-Divisor"></div>
+
+            <div className="Inner">
+              {Latests.map((parola) => (
+                <div key={parola.id} className="sezione-bottoni">
+                  <button>{parola.title}</button>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+
       </main>
     </>
   );

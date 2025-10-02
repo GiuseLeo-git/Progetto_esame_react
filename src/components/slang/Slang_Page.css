@@ -1,11 +1,7 @@
 /* Uniforma la pagina slang a tutto schermo e stile Home */
 .slang-main {
-  min-height: 100vh;
-  width: 100vw;
   box-sizing: border-box;
   padding-top: 60px; /* spazio per navbar */
-  padding-left: 2rem;
-  padding-right: 2rem;
   background: var(--slang-bg, #f9f9f9);
   display: flex;
   flex-direction: column;
@@ -16,23 +12,59 @@
   margin-bottom: 2rem;
 }
 
-.slang-card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  margin-bottom: 2rem;
+.Article-Title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  margin-left: 60px;
+  
 }
 
-.slang-section, .slang-article {
-  flex: 1 1 350px;
-  min-width: 320px;
-  max-width: 500px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-  padding: 1.5rem;
-  margin: 0.5rem;
+.slang-container {
+  display: grid;
+  grid-template-areas: "article section";
+  grid-template-columns: 3fr 1fr;
+
+  /* imposti l’altezza minima per la riga */
+  grid-template-rows: minmax(200px, auto);
+  gap: 1.5rem;
+  background-color: black;
+  padding: 10px;
+  border-radius: 50px;
+}
+
+/* Se vuoi che i contenuti all’interno si estendano */
+.article,
+.section {
+  /* assicurati che possano crescere */
+  min-height: 200px;
+  /* oppure un min-height dentro se vuoi “altezza minima extra” */
+  /* min-height: 300px; */
+}
+
+.Article-Last-Updates {
+  border: 2px solid lightblue;
+  margin: 20px;
+  padding: 10px;
+  width: auto;
+}
+
+.Line-Divisor {
+  background-color: #181818;
+  border: 2px solid;
+  width: 700px;
+}
+
+.LU-Title {
+  font-family:sans-serif;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.Inner {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  gap: 10px;
 }
 
 @media (max-width: 900px) {

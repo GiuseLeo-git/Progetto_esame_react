@@ -1,3 +1,4 @@
+import  "./Section.css";
 import { useState, useEffect } from 'react';
 
 interface Guida {
@@ -10,31 +11,31 @@ interface Guida {
 const guide: Guida[] = [
   {
     id: 1,
-    img: "https://spid",
+    img: "Spid.png",
     alt: "img_spid",
-    text: "sei interessato alla guida sugli slag? Clicca qui"
+    text: "sei interessato alla guida sullo spid?"
   },
   {
     id: 2,
-    img: "https://pagopa",
-    alt: "img_pagopa",
-    text: "sei interessato alla guida per pagare online? Clicca qui"
+    img: "PagoPA.jpg",
+    alt: "img_PagoPA",
+    text: "vuoi sapere come pagare online?"
   },
   {
     id: 3,
-    img: "https://scams",
+    img: "Scam.png",
     alt: "scam_img",
-    text: "vuoi sapere come difenderti dalle truffe online? Clicca qui"
+    text: "vuoi sapere come difenderti dalle truffe online?"
   },
   {
     id: 4,
-    img: "https://posteItaliane",
-    alt: "img_poste",
-    text: "vuoi sapere come registrarti a poste italiane? Clicca qui"
+    img: "PosteIta.png",
+    alt: "Img-posteItaliane",
+    text: "vuoi sapere come registrarti a poste italiane?"
   },
   {
     id: 5,
-    img: "https://phishing",
+    img: "Phishing.png",
     alt: "img_phishing",
     text: "vuoi sapere come difenderti dal phishing? Clicca qui"
   }
@@ -62,8 +63,11 @@ const Section: React.FC = () => {
     <div className="section">
       {risultati.map((guida) => (
         <div key={guida.id} className="card">
+          <div className="cont-img">
           <img src={guida.img} alt={guida.alt} />
+          </div>
           <p>{guida.text}</p>
+          <button>Clicca Qui</button>
         </div>
       ))}
     </div>

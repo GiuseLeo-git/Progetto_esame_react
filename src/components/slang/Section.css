@@ -1,0 +1,15 @@
+.cont-img {
+    width: auto;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+button {
+    width: fit-content;
+    align-self: center;
+    border-radius: 10px;
+    background-color: blue;
+}
