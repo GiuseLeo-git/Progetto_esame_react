@@ -84,6 +84,7 @@
 
 .navbar-accessibility {
   position: relative;
+  margin-right: 1.5rem; /* aggiungi o aumenta questo valore per spostare il tasto più a sinistra */
 }
 
 .accessibility-button {

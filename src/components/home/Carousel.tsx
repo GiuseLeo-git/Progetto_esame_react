@@ -1,78 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Carousel.css";
 
-interface CarouselItem {
-  imageUrl: string;
-  altText: string;
-  buttonText: string;
-  buttonLink: string;
-}
-
-const items: CarouselItem[] = [
-  {
-    imageUrl: "https://picsum.photos/id/1015/1200/400",
-    altText: "Immagine 1",
-    buttonText: "Vai a Pagina 1",
-    buttonLink: "/pagina1",
-  },
-  {
-    imageUrl: "https://picsum.photos/id/1016/1200/400",
-    altText: "Immagine 2",
-    buttonText: "Vai a Pagina 2",
-    buttonLink: "/pagina2",
-  },
-  {
-    imageUrl: "https://picsum.photos/id/1018/1200/400",
-    altText: "Immagine 3",
-    buttonText: "Vai a Pagina 3",
-    buttonLink: "/pagina3",
-  },
+const images = [
+  "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1200&q=80",
+  "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1200&q=80"
 ];
 
-const Carousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+const Carousel = () => {
+  const [current, setCurrent] = useState(0);
 
-  const goToPrevious = () => {
-    setCurrentIndex((prev) => (prev === 0 ? items.length - 1 : prev - 1));
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 7000); // 7 secondi
 
-  const goToNext = () => {
-    setCurrentIndex((prev) => (prev === items.length - 1 ? 0 : prev + 1));
-  };
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <div className="carousel">
-      <button
-        className="carousel-control left"
-        aria-label="Immagine precedente"
-        onClick={goToPrevious}
-      >
-        &#10094;
-      </button>
-
       <div className="carousel-slide">
         <img
-          src={items[currentIndex].imageUrl}
-          alt={items[currentIndex].altText}
+          src={images[current]}
+          alt={`slide-${current}`}
           className="carousel-image"
         />
-        <a
-          href={items[currentIndex].buttonLink}
-          className="carousel-button"
-          role="button"
-          tabIndex={0}
-        >
-          {items[currentIndex].buttonText}
-        </a>
+        {/* Se hai un bottone o altro contenuto, lascialo qui */}
       </div>
-
-      <button
-        className="carousel-control right"
-        aria-label="Immagine successiva"
-        onClick={goToNext}
-      >
-        &#10095;
-      </button>
     </div>
   );
 };

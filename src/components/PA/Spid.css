@@ -1,0 +1,22 @@
+.spid-header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.spid-header h1 {
+  font-size: 2rem;
+  color: #007bff;
+  margin: 0;
+}
+
+.spid-page {
+  max-width: 800px;
+  margin: auto;
+  padding: 2rem;
+  padding-top: 4.5rem; /* esempio: spazio per navbar fissa alta 72px */
+  box-sizing: border-box;
+  width: 100%;
+}
+
+
+/* Puoi aggiungere altri stili per il contenuto */
