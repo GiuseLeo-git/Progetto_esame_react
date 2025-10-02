@@ -1,6 +1,8 @@
 /* Reset e stili base */
-html, body, #root {
+html, body, #root, .App{
   height: 100%;
+  width: 100vw;
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: white !important;
@@ -13,7 +15,7 @@ html, body, #root {
 .app-content {
   padding-top: 60px; /* spazio per navbar fissa */
   padding-left: 2rem;
-  padding-right: 2rem;
+  padding-right: 2rem; /* aggiunta spaziatura a destra */
   font-size: 1rem;
   outline: none;
 }
@@ -50,6 +52,21 @@ a:focus, a:hover {
 html.dark-mode a:focus,
 html.dark-mode a:hover {
   color: #99caff;
+}
+
+
+.navbar {
+  padding-right: 1rem !important; /* riduci il padding a destra */
+  padding-left: 2rem;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* Altri stili della tua app qui */
