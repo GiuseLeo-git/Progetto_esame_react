@@ -1,0 +1,58 @@
+.card-container {
+  display: flex;
+  justify-content: space-between; /* spazio fra le card */
+  gap: 1rem; /* spazio costante tra card */
+  flex-wrap: nowrap; /* per affiancarci sempre, senza andare a capo */
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 1.2rem 1rem;
+  margin: 1rem;
+  cursor: pointer;
+  flex: 1 1 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover, .card:focus {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #007bff;
+}
+
+.card-description {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  align-self: flex-start;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover,
+.card-button:focus {
+  background-color: #0056b3;
+  outline: none;
+}

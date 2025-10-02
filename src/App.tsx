@@ -2,6 +2,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRouter from "./AppRouter";
+import FloatingScamBot from "./components/scam/FloatingScamBot";
 import { SearchProvider } from "./components/SearchContext";
 import "./App.css";
 import type { SetStateAction } from "react";
@@ -17,6 +18,7 @@ function App() {
           throw new Error("Function not implemented.");
         }} />
         <AppRouter />
+        <FloatingScamBot />
         <Footer />
       </div>
     </SearchProvider>

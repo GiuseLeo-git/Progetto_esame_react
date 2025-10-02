@@ -4,7 +4,6 @@ import SearchBar from "./SearchBar";
 import Carousel from "./Carousel";
 import Card from "./Card";
 import ArticlesSection from "./ArticlesSection";
-import Footer from "../Footer";
 
 const Home: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
