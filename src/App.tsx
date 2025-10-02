@@ -1,4 +1,3 @@
-
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import AppRouter from "./AppRouter";
@@ -6,7 +5,6 @@ import FloatingScamBot from "./components/scam/FloatingScamBot";
 import { SearchProvider } from "./components/SearchContext";
 import "./App.css";
 import type { SetStateAction } from "react";
-
 
 function App() {
   return (
@@ -17,7 +15,9 @@ function App() {
         }} fontSize={0} setFontSize={function (value: SetStateAction<number>): void {
           throw new Error("Function not implemented.");
         }} />
-        <AppRouter />
+        <main style={{ flex: 1 }}>
+          <AppRouter />
+        </main>
         <FloatingScamBot />
         <Footer />
       </div>

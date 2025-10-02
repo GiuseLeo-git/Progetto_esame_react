@@ -1,0 +1,7 @@
+[
+    {
+  "id": "guida_spid_001",
+  "title": "Guida allo SPID: Cos'è, a cosa serve e come ottenerlo",
+  "body": "Lo SPID (Sistema Pubblico di Identità Digitale) è un sistema che consente ai cittadini italiani di accedere ai servizi online della Pubblica Amministrazione e di enti privati in modo sicuro e certificato. Con SPID puoi, ad esempio, accedere al sito dell'INPS, prenotare visite mediche, consultare il tuo fascicolo sanitario elettronico, partecipare a concorsi pubblici e molto altro.\n\n🔐 Come funziona:\nSPID è composto da credenziali (username e password) fornite da un gestore accreditato. Esistono tre livelli di sicurezza:\n- Livello 1: accesso con username e password.\n- Livello 2: accesso con password + codice OTP o app.\n- Livello 3: accesso con strumenti di sicurezza avanzati (es. smart card).\n\n📝 Come ottenerlo:\n1. Scegli un gestore SPID tra quelli accreditati (es. PosteID, Aruba, TIM).\n2. Registrati online fornendo i tuoi dati personali.\n3. Verifica la tua identità tramite webcam, di persona o con CIE/CNS.\n4. Ricevi le credenziali SPID via email.\n\n📌 Requisiti:\n- Maggiore età.\n- Documento d’identità valido.\n- Tessera sanitaria o codice fiscale.\n- Email e numero di cellulare attivi.\n\nSPID è gratuito per i cittadini e rappresenta uno strumento fondamentale per semplificare l’accesso ai servizi digitali in Italia."
+    }
+]

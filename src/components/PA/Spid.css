@@ -1,22 +1,76 @@
-.spid-header {
-  padding: 1rem 0;
-  border-bottom: 1px solid #ddd;
-}
-
-.spid-header h1 {
-  font-size: 2rem;
-  color: #007bff;
-  margin: 0;
-}
-
-.spid-page {
+.phishing-page-container {
   max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  padding-top: 4.5rem; /* esempio: spazio per navbar fissa alta 72px */
-  box-sizing: border-box;
-  width: 100%;
+  margin: 2rem auto;
+  padding: 2rem 1rem;
+  background: #f7fafc;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
+.phishing-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-/* Puoi aggiungere altri stili per il contenuto */
+.phishing-header h1 {
+  color: #007bff;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.phishing-header p {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.phishing-video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.phishing-video-wrapper iframe {
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  max-width: 100%;
+}
+
+.articles-section {
+  margin-top: 2rem;
+}
+
+.articles-section h2 {
+  color: #007bff;
+  font-size: 1.4rem;
+  margin-bottom: 1.2rem;
+}
+
+.articles-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.articles-section li {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  margin-bottom: 1.2rem;
+  padding: 1.2rem 1.5rem; /* aumentato lo spazio interno */
+  border-left: 8px solid #007bff; /* bordo più spesso per maggiore distacco visivo */
+  margin-left: 0.5rem;  /* distanzia dal bordo sinistro */
+  margin-right: 0.5rem; /* distanzia dal bordo destro */
+}
+
+.articles-section h3 {
+  margin: 0 0 0.5rem 0;
+  color: #0056b3;
+  font-size: 1.15rem;
+}
+
+.articles-section p {
+  margin: 0;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+}

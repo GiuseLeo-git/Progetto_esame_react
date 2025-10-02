@@ -1,21 +1,31 @@
-import React from 'react';
-import './SPID.css'; // Importa il CSS per lo stile
+import Header from "./HeaderSpid";
+import ArticlesSection from "./ArticlesSectionSpid";
+import "./Spid.css";
 
-const SPID: React.FC = () => {
+function Spid() {
   return (
-    <div className="spid-page">
-      <header className="spid-header">
-        <h1>Cos'è lo SPID?</h1>
-      </header>
-
-      <section className="spid-content">
-        <p>
-          Lo SPID (Sistema Pubblico di Identità Digitale) è il sistema che permette a cittadini e imprese di accedere ai servizi online della Pubblica Amministrazione con un'unica identità digitale sicura.
-        </p>
-        {/* Puoi continuare con altri contenuti come paragrafi, immagini, domande frequenti, ecc. */}
-      </section>
+    <div>
+      <div>
+        <Header />
+      </div>
+      <br></br>
+      <div className="phishing-video-wrapper">
+        <iframe
+          width="1120"
+          height="630"
+          src="https://www.youtube.com/embed/w5Z5EBG1R1M?si=veMv6V3MKWybhN5W"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+      </div>
+      <div>
+        <ArticlesSection />
+      </div>
     </div>
   );
-};
+}
 
-export default SPID;
+export default Spid;

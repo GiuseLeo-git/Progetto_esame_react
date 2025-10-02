@@ -1,10 +1,9 @@
 .card-container {
   display: flex;
-  justify-content: center; /* centra le card */
-  gap: 2rem;
+  justify-content: space-between; /* spazio fra le card */
+  gap: 1rem; /* spazio costante tra card */
+  flex-wrap: nowrap; /* per affiancarci sempre, senza andare a capo */
   margin: 2rem 0;
-  flex-wrap: nowrap; /* o rimuovi per responsività */
-  overflow-x: auto; /* scroll se card troppe per lo schermo */
 }
 
 .card {
@@ -12,17 +11,14 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   padding: 1.2rem 1rem;
+  margin: 1rem;
   cursor: pointer;
-  flex: 0 0 auto;
-  max-width: 320px; /* aumenta larghezza */
-  width: 100%;
+  flex: 1 1 30%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: box-shadow 0.3s ease;
-  margin: 1rem 0;
 }
-
 
 .card:hover, .card:focus {
   box-shadow: 0 8px 16px rgba(0,0,0,0.2);

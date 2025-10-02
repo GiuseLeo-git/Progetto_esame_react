@@ -5,6 +5,7 @@ import PA from './components/PA/PA';
 import Scam from './components/scam/scam';
 import Bot from './components/scam/bot';
 import Phishing from './components/scam/phishing';
+import Spid from './components/PA/Spid';
 
 function AppRouter(){
     return(
@@ -15,6 +16,7 @@ function AppRouter(){
             <Route path="/scam" element={<Scam />} />
             <Route path="/bot" element={<Bot />} />
             <Route path="/phishing" element={<Phishing />} />
+            <Route path="/spid" element={<Spid />} />
         </Routes>
     )
 }
