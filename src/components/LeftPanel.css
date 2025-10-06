@@ -1,0 +1,277 @@
+/* Left Panel */
+.left-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(100%);
+  transition: all 0.8s ease-in-out;
+}
+
+/* All panels have transparent background */
+.left-panel:nth-of-type(1),
+.left-panel:nth-of-type(2),
+.left-panel:nth-of-type(3) {
+  background: transparent;
+}
+
+/* Panel 1 - Pubblica Amministrazione (Blue title) */
+.panel-1 .left-panel-content h2 {
+  color: #3b82f6 !important;
+}
+
+/* Panel 2 - Truffe Online (Red title) */
+.panel-2 .left-panel-content h2 {
+  color: #ef4444 !important;
+}
+
+/* Panel 3 - Glossario Digitale (Green title) */
+.panel-3 .left-panel-content h2 {
+  color: #22c55e !important;
+}
+
+/* Panel 1 - Pubblica Amministrazione (Blue button) */
+.button-1 {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border: 2px solid #3b82f6 !important;
+  color: #3b82f6 !important;
+}
+
+.button-1:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-1:active {
+  background: rgba(59, 130, 246, 0.3) !important;
+  transform: translateY(0);
+}
+
+/* Panel 2 - Truffe Online (Red button) */
+.button-2 {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border: 2px solid #ef4444 !important;
+  color: #ef4444 !important;
+}
+
+.button-2:hover {
+  background: rgba(239, 68, 68, 0.2) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-2:active {
+  background: rgba(239, 68, 68, 0.3) !important;
+  transform: translateY(0);
+}
+
+/* Panel 3 - Glossario Digitale (Green button) */
+.button-3 {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border: 2px solid #22c55e !important;
+  color: #22c55e !important;
+}
+
+.button-3:hover {
+  background: rgba(34, 197, 94, 0.2) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-3:active {
+  background: rgba(34, 197, 94, 0.3) !important;
+  transform: translateY(0);
+}
+
+.left-panel.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Close Button */
+.close-button {
+  position: fixed;
+  top: 20px;
+  left: 60px;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  z-index: 25;
+}
+
+.close-button span {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Dark mode styles for close button */
+[data-theme="dark"] .close-button {
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid #ffffff;
+}
+
+[data-theme="dark"] .close-button span {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .close-button:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: #ffffff;
+}
+
+.close-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1);
+  border-color: #333333;
+}
+
+.close-button:active {
+  transform: scale(0.95);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.left-panel-content {
+  max-width: 400px;
+  padding: 2rem;
+  text-align: center;
+  color: #333333;
+}
+
+.left-panel-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: none;
+  font-weight: 700;
+}
+
+.left-panel-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem !important;
+  text-shadow: none;
+  opacity: 0.9;
+}
+
+.explore-button {
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.explore-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.explore-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .left-panel {
+    width: 30%;
+  }
+  
+  .left-panel-content {
+    padding: 1.5rem;
+  }
+  
+  .left-panel-content h2 {
+    font-size: 2rem;
+  }
+  
+  .left-panel-content p {
+    font-size: 1rem;
+    margin-bottom: 4rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-panel {
+    width: 30%;
+    height: 100%;
+  }
+  
+  .left-panel-content {
+    padding: 1rem;
+  }
+  
+  .left-panel-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .left-panel-content p {
+    font-size: 0.9rem;
+    margin-bottom: 4rem !important;
+  }
+  
+  .explore-button {
+    padding: 10px 25px;
+    font-size: 1rem;
+  }
+  
+  .close-button {
+    width: 50px;
+    height: 50px;
+    top: 15px;
+    left: 45px;
+  }
+  
+  .close-button span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-panel-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .left-panel-content p {
+    font-size: 0.8rem;
+    margin-bottom: 4rem !important;
+  }
+  
+  .explore-button {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .close-button {
+    width: 45px;
+    height: 45px;
+    top: 10px;
+    left: 30px;
+  }
+  
+  .close-button span {
+    font-size: 1.1rem;
+  }
+}

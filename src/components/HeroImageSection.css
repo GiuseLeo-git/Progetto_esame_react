@@ -1,0 +1,319 @@
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Hero Section Wrapper */
+.hero-section-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 80vh;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+/* Global Close Button */
+.global-close-button {
+  position: absolute;
+  top: 40px;
+  left: 60px;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 30;
+}
+
+.global-close-button span {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.global-close-button:hover {
+  background: transparent;
+  transform: scale(1.1);
+  border-color: #333333;
+}
+
+.global-close-button:active {
+  transform: scale(0.95);
+  background: transparent;
+}
+
+/* Hero Image Section */
+.hero-image-section {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.hero-image-section.shifted {
+  transform: translateX(40%); /* Shifted to 60% of screen */
+}
+
+/* Image Container */
+.image-container {
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hero Text */
+.hero-text {
+  position: absolute;
+  bottom: 20px;
+  right: 100px;
+  background: transparent;
+  padding: 1.5rem;
+  max-width: 300px;
+  z-index: 10;
+  text-align: right;
+}
+
+.hero-text h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white !important;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  text-align: right;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero-text p {
+  font-size: 0.9rem;
+  color: white !important;
+  line-height: 1.4;
+  margin: 0;
+  text-align: right;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Floating Buttons */
+.floating-button {
+  position: absolute;
+  width: 80px; /* Round button size - increased */
+  height: 80px; /* Round button size - increased */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1)); /* Glossy gradient background */
+  backdrop-filter: blur(10px); /* Glass effect */
+  border: 2px solid white; /* White border */
+  border-radius: 50%; /* Round shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.8s ease; /* Longer transition for repositioning */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.4); /* Glossy shadow with inner highlight */
+  z-index: 10;
+  padding: 8px; /* Small space between background and border */
+}
+
+.floating-button span {
+  color: white;
+  font-size: 2rem; /* Larger font size for numbers */
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Center text */
+  line-height: 1; /* Single line for numbers */
+}
+
+.floating-button:hover {
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.8); /* Hover border color */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2)); /* Enhanced glossy on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.6); /* Enhanced glossy shadow */
+}
+
+.floating-button:active {
+  transform: scale(0.95);
+  border-color: rgba(255, 255, 255, 0.6); /* Active border color */
+}
+
+/* Button Labels */
+.button-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 12px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  z-index: 20;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: fadeInUp 0.3s ease-out;
+}
+
+/* Button 1 - Pubblica Amministrazione (Blue) */
+.label-1 {
+  background: rgba(59, 130, 246, 0.9) !important; /* Blue background */
+  border-color: rgba(59, 130, 246, 0.5) !important;
+  color: white !important; /* White text */
+}
+
+.button-1 {
+  border: 2px solid white !important; /* White border for button */
+}
+
+/* Button 2 - Truffe Online (Red) */
+.label-2 {
+  background: rgba(239, 68, 68, 0.9) !important; /* Red background */
+  border-color: rgba(239, 68, 68, 0.5) !important;
+  color: white !important; /* White text */
+}
+
+.button-2 {
+  border: 2px solid white !important; /* White border for button */
+}
+
+/* Button 3 - Glossario Digitale (Green) */
+.label-3 {
+  background: rgba(34, 197, 94, 0.9) !important; /* Green background */
+  border-color: rgba(34, 197, 94, 0.5) !important;
+  color: white !important; /* White text */
+}
+
+.button-3 {
+  border: 2px solid white !important; /* White border for button */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .floating-button {
+    width: 65px; /* Responsive size */
+    height: 65px; /* Responsive size */
+  }
+  
+  .floating-button span {
+    font-size: 1.6rem; /* Responsive font size */
+  }
+  
+  .global-close-button {
+    width: 50px;
+    height: 50px;
+    top: 100px;
+    left: 45px;
+  }
+  
+  .global-close-button span {
+    font-size: 1.3rem;
+  }
+  
+  .button-label {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+  
+  .hero-text {
+    padding: 1.2rem;
+    max-width: 280px;
+    bottom: 15px;
+    right: 80px;
+    text-align: right;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.3rem;
+    color: white !important;
+    text-align: right;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .hero-text p {
+    font-size: 0.8rem;
+    color: white !important;
+    text-align: right;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image-section {
+    height: 80vh;
+  }
+  
+  .floating-button {
+    width: 60px; /* Responsive size */
+    height: 60px; /* Responsive size */
+  }
+  
+  .floating-button span {
+    font-size: 1.4rem; /* Responsive font size */
+  }
+  
+  .global-close-button {
+    width: 45px;
+    height: 45px;
+    top: 80px;
+    left: 30px;
+  }
+  
+  .global-close-button span {
+    font-size: 1.1rem;
+  }
+  
+  .button-label {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+  
+  .hero-text {
+    padding: 1rem;
+    max-width: 250px;
+    bottom: 10px;
+    right: 60px;
+    text-align: right;
+  }
+  
+  .hero-text h1 {
+    font-size: 1.1rem;
+    color: white !important;
+    text-align: right;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .hero-text p {
+    font-size: 0.75rem;
+    color: white !important;
+    text-align: right;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  }
+}
+

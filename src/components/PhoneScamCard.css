@@ -1,0 +1,167 @@
+.phone-scam-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 450px;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-scam-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .phone-scam-card {
+  background-color: #1f2937;
+}
+
+[data-theme="dark"] .phone-scam-card:hover {
+  background-color: #2d3748;
+}
+
+/* Header con colore rosso per il tema truffe telefoniche */
+.phone-scam-card .card-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ef4444;
+  z-index: 1;
+}
+
+[data-theme="dark"] .phone-scam-card .card-header {
+  background: #f87171;
+}
+
+/* Card Content */
+.phone-scam-card .card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.phone-scam-card .card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.phone-scam-card .card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  min-height: 0;
+}
+
+.phone-scam-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+
+.phone-scam-card p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.phone-scam-card .card-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+  padding-top: 1.5rem;
+  min-height: 80px;
+}
+
+[data-theme="dark"] .phone-scam-card h3 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .phone-scam-card p {
+  color: #9ca3af;
+}
+
+.phone-scam-card .card-link {
+  display: inline-block;
+  background-color: #ef4444;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+
+.phone-scam-card .card-link:hover {
+  background-color: #dc2626;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 68, 68, 0.3);
+}
+
+[data-theme="dark"] .phone-scam-card .card-link {
+  background-color: #f87171;
+}
+
+[data-theme="dark"] .phone-scam-card .card-link:hover {
+  background-color: #ef4444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .phone-scam-card {
+    height: 400px;
+    min-height: 400px;
+  }
+  
+  .phone-scam-card .card-content {
+    padding: 2rem;
+  }
+  
+  .phone-scam-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .phone-scam-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .phone-scam-card p {
+    font-size: 0.95rem;
+  }
+  
+  .phone-scam-card .card-text {
+    margin-bottom: 1.8rem;
+  }
+  
+  .phone-scam-card .card-footer {
+    padding-top: 1.2rem;
+    min-height: 70px;
+  }
+  
+  .phone-scam-card .card-link {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}

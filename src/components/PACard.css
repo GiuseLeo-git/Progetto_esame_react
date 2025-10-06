@@ -1,0 +1,169 @@
+.pa-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  height: 420px;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+}
+
+.pa-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .pa-card {
+  background-color: #1f2937;
+  border-color: #374151;
+}
+
+[data-theme="dark"] .pa-card:hover {
+  background-color: #2d3748;
+}
+
+/* Header con colore azzurro */
+.pa-card .card-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #3b82f6;
+  z-index: 1;
+}
+
+[data-theme="dark"] .pa-card .card-header {
+  background: #60a5fa;
+}
+
+/* Card Content */
+.pa-card .card-content {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.pa-card .card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.pa-card .card-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  min-height: 0;
+}
+
+.pa-card h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 1.2rem;
+  flex-shrink: 0;
+  line-height: 1.3;
+}
+
+.pa-card p {
+  color: #6b7280;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  font-size: 1rem;
+}
+
+.pa-card .card-footer {
+  margin-top: auto;
+  flex-shrink: 0;
+  padding-top: 1.5rem;
+  min-height: 70px;
+}
+
+[data-theme="dark"] .pa-card h3 {
+  color: #f9fafb;
+}
+
+[data-theme="dark"] .pa-card p {
+  color: #9ca3af;
+}
+
+.pa-card .card-link {
+  display: inline-block;
+  background-color: #3b82f6;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(59, 130, 246, 0.2);
+}
+
+.pa-card .card-link:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="dark"] .pa-card .card-link {
+  background-color: #60a5fa;
+}
+
+[data-theme="dark"] .pa-card .card-link:hover {
+  background-color: #3b82f6;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .pa-card {
+    height: 380px;
+    min-height: 380px;
+  }
+  
+  .pa-card .card-content {
+    padding: 2rem;
+  }
+  
+  .pa-card .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .pa-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pa-card p {
+    font-size: 0.95rem;
+  }
+  
+  .pa-card .card-text {
+    margin-bottom: 1.5rem;
+  }
+  
+  .pa-card .card-footer {
+    padding-top: 1.25rem;
+  }
+  
+  .pa-card .card-link {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.85rem;
+  }
+}
